@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://prosakataweb.netlify.app/</loc><priority>1.0</priority></url>
-  <url><loc>https://prosakataweb.netlify.app/#services</loc></url>
-  <url><loc>https://prosakataweb.netlify.app/#about</loc></url>
-  <url><loc>https://prosakataweb.netlify.app/#build</loc></url>
-  <url><loc>https://prosakataweb.netlify.app/#pricing</loc></url>
-  <url><loc>https://prosakataweb.netlify.app/#testimonials</loc></url>
-  <url><loc>https://prosakataweb.netlify.app/#hire</loc></url>
-  <url><loc>https://prosakataweb.netlify.app/#contact</loc></url>
+  <url><loc>https://prosakata-website.vercel.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://prosakata-website.vercel.app/#services</loc></url>
+  <url><loc>https://prosakata-website.vercel.app/#about</loc></url>
+  <url><loc>https://prosakata-website.vercel.app/#build</loc></url>
+  <url><loc>https://prosakata-website.vercel.app/#pricing</loc></url>
+  <url><loc>https://prosakata-website.vercel.app/#testimonials</loc></url>
+  <url><loc>https://prosakata-website.vercel.app/#hire</loc></url>
+  <url><loc>https://prosakata-website.vercel.app/#contact</loc></url>
 </urlset>
