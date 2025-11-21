@@ -33,7 +33,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background-color: var(--bg); /* باش مايبقاش الأبيض ديال html */
+  background-color: var(--bg);
 }
 
 body {
@@ -45,8 +45,7 @@ body {
     radial-gradient(circle at 82% 14%, rgba(123, 45, 255, 0.35), transparent 55%),
     radial-gradient(circle at 12% 90%, rgba(0, 217, 255, 0.14), transparent 55%),
     linear-gradient(145deg, #020617 0%, #050816 55%, #050019 100%);
-  /* مهم للموبايل: ماشي fixed باش مايبانش فراغ أبيض */
-  background-attachment: scroll;
+  background-attachment: scroll; /* مهم للموبايل */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -89,7 +88,7 @@ body {
   color: var(--muted);
 }
 
-/* لو بغيت ترجع اللوغو داير دائري صغير قدام PROSAKATA (اختياري) */
+/* لوغو دائري (اختياري) */
 .logo-mark {
   display: inline-flex;
   align-items: center;
@@ -103,7 +102,7 @@ body {
   color: #e5e7eb;
 }
 
-/* Gradient text للّوغو (إذا استعملت span.logo-text داخل .logo) */
+/* Gradient text للوغو */
 .logo-text {
   background: linear-gradient(90deg, #e5e7eb, #a5b4fc);
   background-clip: text;
@@ -132,10 +131,10 @@ body {
   padding: 7px 16px;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
-  color: #ffffff !important;    /* ← النص غيولي أبيض وواضح */
-  font-weight: 600;             /* ← ثخانة للنص */
-  font-size: 14px;              /* ← باش يكبر شوي */
-  text-shadow: 0 1px 3px rgba(0,0,0,0.35); /* ← يخلي النص يبان فوق الخلفية */
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 14px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
   box-shadow:
     0 0 0 1px rgba(15, 23, 42, 0.6),
     0 12px 35px rgba(56, 189, 248, 0.4);
@@ -163,7 +162,7 @@ body {
   margin: 0 0 20px;
 }
 
-/* gradient text ديال "performance, AI & clarity." */
+/* gradient text ديال "performance & clarity." */
 .gradient {
   background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
   background-clip: text;
@@ -277,6 +276,64 @@ body {
   100% {
     transform: scale(1);
     filter: drop-shadow(0 0 0 rgba(56, 189, 248, 0.5));
+  }
+}
+
+/* أنيميشن اللابتوب والكرة */
+.hero-visual .laptop-float,
+.hero-visual .globe-orbit {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hero-visual .laptop-float {
+  animation: laptop-float 7s ease-in-out infinite;
+}
+
+.hero-visual .globe-orbit {
+  animation: globe-spin 18s linear infinite;
+}
+
+.hero-visual .screen-glow {
+  animation: glow-pulse 6s ease-in-out infinite;
+}
+
+@keyframes laptop-float {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes globe-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glow-pulse {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
   }
 }
 
@@ -434,7 +491,7 @@ body {
 }
 
 /* =========================
-   AI FAB
+   AI FAB (لو بغيت تستعملو مستقبلاً)
    ========================= */
 
 .ai-fab {
@@ -547,7 +604,6 @@ body {
   .nav-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
   }
 
   .nav-links {
