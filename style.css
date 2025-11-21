@@ -32,6 +32,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
+  background-color: var(--bg); /* باش مايبقاش الأبيض ديال html */
 }
 
 body {
@@ -43,7 +45,10 @@ body {
     radial-gradient(circle at 82% 14%, rgba(123, 45, 255, 0.35), transparent 55%),
     radial-gradient(circle at 12% 90%, rgba(0, 217, 255, 0.14), transparent 55%),
     linear-gradient(145deg, #020617 0%, #050816 55%, #050019 100%);
-  background-attachment: fixed;
+  /* مهم للموبايل: ماشي fixed باش مايبانش فراغ أبيض */
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Helpers */
