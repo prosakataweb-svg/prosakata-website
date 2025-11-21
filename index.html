@@ -29,11 +29,9 @@
   <header class="navbar">
     <div class="nav-inner container">
       <div class="logo">
-        <!-- <span class="logo-mark">PS</span> -->
         <span class="logo-text">PROSAKATA STUDIO</span>
       </div>
 
-      <!-- خليت غير Contact كما طلبت -->
       <nav class="nav-links">
         <a href="#contact" class="nav-contact">Contact</a>
       </nav>
@@ -48,7 +46,7 @@
         <div class="hero-content">
           <h1 class="hero-title">
             Advanced websites built with
-            <span class="gradient">performance & clarity.</span>
+            <span class="gradient">performance &amp; clarity.</span>
           </h1>
 
           <p class="hero-lead">
@@ -75,150 +73,259 @@
           </ul>
         </div>
 
-        <!-- الرسم: Server -->
+        <!-- الرسم: Laptop + web network -->
         <div class="hero-visual">
           <svg viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <defs>
-              <linearGradient id="serverGrad" x1="0" y1="0" x2="1" y2="1">
+              <linearGradient id="lapBody" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stop-color="#020617" />
                 <stop offset="100%" stop-color="#020617" />
               </linearGradient>
 
-              <linearGradient id="frameGrad" x1="0" y1="0" x2="1" y2="1">
+              <linearGradient id="lapFrame" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stop-color="#22d3ee" />
                 <stop offset="50%" stop-color="#38bdf8" />
                 <stop offset="100%" stop-color="#a855f7" />
               </linearGradient>
 
-              <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#e0f2fe" />
-                <stop offset="40%" stop-color="#38bdf8" />
+              <linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#0f172a" />
+                <stop offset="100%" stop-color="#020617" />
+              </linearGradient>
+
+              <radialGradient id="lapGlow" cx="50%" cy="30%" r="65%">
+                <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.9" />
+                <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.35" />
                 <stop offset="100%" stop-color="transparent" />
               </radialGradient>
             </defs>
 
-            <!-- ظل تحت السيرفرات -->
-            <ellipse cx="210" cy="320" rx="150" ry="26" fill="#020617" opacity="0.8" />
+            <!-- ظل تحت اللابتوب -->
+            <ellipse cx="210" cy="305" rx="155" ry="28" fill="#020617" opacity="0.9" />
 
-            <!-- السيرفر السفلي -->
-            <g>
-              <rect x="60" y="230" rx="26" ry="26" width="300" height="110" fill="#020617" />
-              <rect
-                x="72"
-                y="242"
-                rx="22"
-                ry="22"
-                width="276"
-                height="86"
-                fill="url(#serverGrad)"
-                stroke="#0f172a"
-                stroke-width="2"
-              />
+            <!-- كلشي داخل مجموعة كتطفو -->
+            <g class="laptop-float">
+              <!-- Glow + globe -->
+              <g transform="translate(0,-40)">
+                <circle cx="210" cy="95" r="90" fill="url(#lapGlow)" class="screen-glow" />
 
-              <rect x="100" y="265" width="150" height="10" rx="5" fill="#0ea5e9" opacity=".8" />
-              <rect x="100" y="283" width="120" height="8" rx="4" fill="#4b5563" opacity=".95" />
-              <rect x="100" y="299" width="90" height="8" rx="4" fill="#4b5563" opacity=".75" />
+                <!-- orbit كيدور -->
+                <circle
+                  class="globe-orbit"
+                  cx="210"
+                  cy="95"
+                  r="70"
+                  fill="none"
+                  stroke="url(#lapFrame)"
+                  stroke-width="1.8"
+                  stroke-opacity="0.7"
+                />
 
-              <rect x="270" y="264" width="32" height="8" rx="4" fill="#22d3ee" />
-              <rect x="270" y="278" width="32" height="8" rx="4" fill="#38bdf8" opacity=".85" />
-              <rect x="270" y="292" width="32" height="8" rx="4" fill="#a855f7" opacity=".9" />
+                <!-- دائرة داخلية -->
+                <circle
+                  cx="210"
+                  cy="95"
+                  r="50"
+                  fill="none"
+                  stroke="#0ea5e9"
+                  stroke-width="1"
+                  stroke-opacity="0.35"
+                />
+
+                <!-- خطوط الشبكة -->
+                <path
+                  d="M160 95h100 M210 45v100
+                     M160 80c16-10 34-15 50-15s34 5 50 15
+                     M160 110c16 10 34 15 50 15s34-5 50-15"
+                  fill="none"
+                  stroke="#22d3ee"
+                  stroke-width="1.3"
+                  stroke-opacity="0.5"
+                />
+
+                <!-- نواة مضيئة (تستعمل .ai-core) -->
+                <circle
+                  class="ai-core"
+                  cx="210"
+                  cy="95"
+                  r="11"
+                  fill="#020617"
+                  stroke="#38bdf8"
+                  stroke-width="3"
+                />
+                <circle cx="210" cy="95" r="4" fill="#22d3ee" />
+              </g>
+
+              <!-- جسم اللابتوب -->
+              <g transform="translate(0,10)">
+                <!-- الجزء السفلي (القاعدة) -->
+                <path
+                  d="M80 250h260c6 0 10 4 12 9l10 35H58l10-35c2-5 6-9 12-9z"
+                  fill="#020617"
+                  stroke="#0f172a"
+                  stroke-width="2"
+                />
+                <rect
+                  x="70"
+                  y="260"
+                  width="280"
+                  height="26"
+                  rx="10"
+                  fill="url(#lapBody)"
+                />
+                <!-- تاتش باد -->
+                <rect
+                  x="190"
+                  y="266"
+                  width="40"
+                  height="14"
+                  rx="6"
+                  fill="#020617"
+                  stroke="#1f2937"
+                  stroke-width="1"
+                  opacity="0.9"
+                />
+
+                <!-- الشاشة -->
+                <g>
+                  <!-- إطار الشاشة -->
+                  <rect
+                    x="80"
+                    y="110"
+                    rx="18"
+                    ry="18"
+                    width="260"
+                    height="145"
+                    fill="#020617"
+                    stroke="url(#lapFrame)"
+                    stroke-width="2"
+                  />
+                  <!-- داخل الشاشة -->
+                  <rect
+                    x="92"
+                    y="122"
+                    rx="14"
+                    ry="14"
+                    width="236"
+                    height="121"
+                    fill="url(#screenGrad)"
+                    stroke="#020617"
+                    stroke-width="1.5"
+                  />
+
+                  <!-- بار علوي (tab / title) -->
+                  <rect
+                    x="108"
+                    y="135"
+                    width="150"
+                    height="14"
+                    rx="7"
+                    fill="url(#lapFrame)"
+                    class="screen-glow"
+                  />
+
+                  <!-- خطوط تمثّل sections -->
+                  <rect
+                    x="108"
+                    y="158"
+                    width="120"
+                    height="8"
+                    rx="4"
+                    fill="#e5e7eb"
+                    class="screen-line-1"
+                    opacity="0.8"
+                  />
+                  <rect
+                    x="108"
+                    y="172"
+                    width="150"
+                    height="8"
+                    rx="4"
+                    fill="#9ca3af"
+                    class="screen-line-2"
+                    opacity="0.7"
+                  />
+                  <rect
+                    x="108"
+                    y="186"
+                    width="130"
+                    height="7"
+                    rx="3.5"
+                    fill="#6b7280"
+                    class="screen-line-3"
+                    opacity="0.6"
+                  />
+
+                  <!-- بلوكات يمين تمثل widgets / KPIs -->
+                  <rect
+                    x="255"
+                    y="158"
+                    width="52"
+                    height="50"
+                    rx="10"
+                    fill="#020617"
+                    stroke="#1f2937"
+                    stroke-width="1.5"
+                  />
+                  <rect
+                    x="263"
+                    y="164"
+                    width="36"
+                    height="7"
+                    rx="3.5"
+                    fill="#22d3ee"
+                    opacity="0.9"
+                  />
+                  <rect
+                    x="263"
+                    y="176"
+                    width="30"
+                    height="7"
+                    rx="3.5"
+                    fill="#38bdf8"
+                    opacity="0.85"
+                  />
+                  <rect
+                    x="263"
+                    y="188"
+                    width="24"
+                    height="7"
+                    rx="3.5"
+                    fill="#a855f7"
+                    opacity="0.95"
+                  />
+
+                  <!-- لستة صغيرة تحت -->
+                  <rect
+                    x="108"
+                    y="205"
+                    width="90"
+                    height="7"
+                    rx="3.5"
+                    fill="#4b5563"
+                    opacity="0.9"
+                  />
+                  <rect
+                    x="108"
+                    y="217"
+                    width="70"
+                    height="7"
+                    rx="3.5"
+                    fill="#4b5563"
+                    opacity="0.7"
+                  />
+                  <rect
+                    x="108"
+                    y="229"
+                    width="56"
+                    height="7"
+                    rx="3.5"
+                    fill="#4b5563"
+                    opacity="0.5"
+                  />
+                </g>
+              </g>
             </g>
-
-            <!-- السيرفر الأوسط -->
-            <g transform="translate(0,-70)">
-              <rect x="60" y="210" rx="26" ry="26" width="300" height="110" fill="#020617" />
-              <rect
-                x="72"
-                y="222"
-                rx="22"
-                ry="22"
-                width="276"
-                height="86"
-                fill="url(#serverGrad)"
-                stroke="#0f172a"
-                stroke-width="2"
-              />
-
-              <rect x="100" y="231" width="120" height="8" rx="4" fill="#22d3ee" opacity=".9" />
-              <rect x="100" y="245" width="170" height="10" rx="5" fill="#0ea5e9" opacity=".9" />
-              <rect x="100" y="263" width="140" height="8" rx="4" fill="#4b5563" opacity=".95" />
-              <rect x="100" y="279" width="110" height="8" rx="4" fill="#4b5563" opacity=".75" />
-            </g>
-
-            <!-- السيرفر العلوي -->
-            <g transform="translate(0,-135)">
-              <rect x="70" y="190" rx="26" ry="26" width="280" height="118" fill="#020617" />
-              <rect
-                x="80"
-                y="198"
-                rx="22"
-                ry="22"
-                width="260"
-                height="102"
-                fill="#020617"
-                stroke="#111827"
-                stroke-width="2"
-              />
-
-              <rect x="102" y="215" width="155" height="16" rx="8" fill="url(#frameGrad)" />
-
-              <rect x="102" y="241" width="135" height="10" rx="5" fill="#e5e7eb" opacity=".9" />
-              <rect x="102" y="257" width="120" height="8" rx="4" fill="#9ca3af" />
-              <rect x="102" y="271" width="90" height="8" rx="4" fill="#6b7280" />
-
-              <rect
-                x="270"
-                y="225"
-                width="40"
-                height="63"
-                rx="12"
-                fill="#020617"
-                stroke="#1f2937"
-                stroke-width="2"
-              />
-              <rect x="278" y="234" width="24" height="8" rx="4" fill="#22d3ee" />
-              <rect x="278" y="248" width="24" height="8" rx="4" fill="#38bdf8" opacity=".9" />
-              <rect x="278" y="262" width="24" height="8" rx="4" fill="#a855f7" opacity=".9" />
-            </g>
-
-            <!-- دائرة مضيئة فوق السيرفرات -->
-            <g transform="translate(0,-165)">
-              <circle cx="210" cy="150" r="70" fill="url(#coreGrad)" opacity="0.85" />
-              <circle
-                cx="210"
-                cy="150"
-                r="52"
-                fill="none"
-                stroke="url(#frameGrad)"
-                stroke-width="2"
-                opacity=".8"
-              />
-
-              <circle
-                class="ai-core"
-                cx="210"
-                cy="150"
-                r="18"
-                fill="#0f172a"
-                stroke="#38bdf8"
-                stroke-width="3"
-              />
-              <circle cx="210" cy="150" r="6" fill="#22d3ee" />
-            </g>
-
-            <!-- إطار زجاجي عام -->
-            <rect
-              x="52"
-              y="120"
-              width="316"
-              height="210"
-              rx="42"
-              ry="42"
-              fill="none"
-              stroke="url(#frameGrad)"
-              stroke-width="2"
-              opacity=".5"
-            />
           </svg>
         </div>
       </div>
@@ -234,12 +341,12 @@
 
         <div class="cards cards-3">
           <article class="card">
-            <h3>Launch & landing pages</h3>
+            <h3>Launch &amp; landing pages</h3>
             <p>Single focus pages for products, apps or events, built to convert — not just “look nice”.</p>
           </article>
 
           <article class="card">
-            <h3>Portfolio & personal brands</h3>
+            <h3>Portfolio &amp; personal brands</h3>
             <p>Present your work like a product: clean layout, case studies and social proof.</p>
           </article>
 
@@ -261,24 +368,24 @@
 
         <div class="cards cards-3">
           <article class="card mini">
-            <h3>Founders & consultants</h3>
+            <h3>Founders &amp; consultants</h3>
             <p>Authority homepages, offer pages and workshop/speaking pages.</p>
           </article>
 
           <article class="card mini">
-            <h3>Studios & agencies</h3>
+            <h3>Studios &amp; agencies</h3>
             <p>Case-driven portfolios with clear services, process and results.</p>
           </article>
 
           <article class="card mini">
-            <h3>Products & SaaS</h3>
+            <h3>Products &amp; SaaS</h3>
             <p>Product intro pages, feature deep dives and early-stage waitlists.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ========== AI ADD-ONS (خليته كما هو حيت خدمة كتقدمها) ========== -->
+    <!-- ========== AI ADD-ONS ========== -->
     <section id="ai-addons" class="section">
       <div class="container">
         <h2 class="section-title">AI add-ons</h2>
@@ -346,7 +453,6 @@
         <p class="section-sub">
           No public price table. Every project is different in depth, copy, structure and integrations.
         </p>
-        <!-- حيدت كامل الكروت ديال الباقات كما طلبت -->
       </div>
     </section>
 
@@ -416,25 +522,27 @@
   <script>
     (function () {
       if (!window.chatbase || window.chatbase("getState") !== "initialized") {
-        window.chatbase = (...arguments) => {
+        window.chatbase = function () {
           if (!window.chatbase.q) { window.chatbase.q = []; }
           window.chatbase.q.push(arguments);
         };
         window.chatbase = new Proxy(window.chatbase, {
-          get(target, prop) {
+          get: function (target, prop) {
             if (prop === "q") { return target.q; }
-            return (...args) => target(prop, ...args);
+            return function () {
+              target(prop, ...arguments);
+            };
           },
         });
       }
 
-      const onLoad = function () {
-        const script = document.createElement("script");
+      function onLoad() {
+        var script = document.createElement("script");
         script.src = "https://www.chatbase.co/embed.min.js";
         script.id = "ahNQzFLdkcOoipmLcYTgT";
         script.domain = "www.chatbase.co";
         document.body.appendChild(script);
-      };
+      }
 
       if (document.readyState === "complete") {
         onLoad();
