@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://prosakataweb.netlify.app/sitemap.xml
